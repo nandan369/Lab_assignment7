@@ -52,6 +52,9 @@ bool isPathToFreedom(MazeCell* start, const std::string& moves) {
             default: break;
         }
 
+        //instructions might say to not have early return like this.
+        //if you find all items then make illegal move it shoudl return false i think
+
         // Check if all items have been collected
         if (hasSpellbook && hasPotion && hasWand) {
             return true; // Early exit if all items collected
